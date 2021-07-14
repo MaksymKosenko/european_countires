@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -5,8 +7,25 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void navigateToHomePage() {
+      Timer(Duration(seconds: 5), () {
+        Navigator.popAndPushNamed(context, "/Home");
+      });
+    }
+
+    navigateToHomePage();
+
     return Scaffold(
-      body: Center(child: Text("SplashScreen"),),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(radius: 110, backgroundColor: Colors.white,),
+            SizedBox(height: 20,),
+            Text("Earth globe")
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
-import 'package:european_countires/ui/router.dart';
 import 'package:flutter/material.dart';
+
+import 'package:european_countires/ui/router.dart';
 
 void main() {
   runApp(MyApp(router: AppRouter(),));
